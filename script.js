@@ -139,6 +139,11 @@ document.getElementById("card-container").addEventListener("click", (e)=>{
 
         const card = e.target.closest(".card-single")
         card.remove();
+
+
+        availableCount = parseInt(document.getElementById("toal-available").innerText)
+        availableCount--
+        document.getElementById("toal-available").innerText = availableCount   
     }
 })
 
@@ -172,7 +177,7 @@ for (const btn of interviewBtnClicked) {
         if (clonedRejectBtn) clonedRejectBtn.classList.add("hidden");
 
         // Append the cloned card to the interview section
-        document.getElementById("interview-section").appendChild(clonedCard);
+        // document.getElementById("interview-section").appendChild(clonedCard);
     });
 }
 
